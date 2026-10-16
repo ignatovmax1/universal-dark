@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Universal Dark</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Universal Dark <small id="ver"></small></h1>
+
+  <a id="update" class="update" hidden target="_blank" rel="noopener"></a>
+
+  <label class="row">
+    <span>Тёмная тема</span>
+    <input type="checkbox" id="enabled" role="switch">
+  </label>
+
+  <label class="row">
+    <span>Следовать теме системы</span>
+    <input type="checkbox" id="followSystem" role="switch">
+  </label>
+
+  <label class="row">
+    <span>Выключить на <b id="host">этом сайте</b></span>
+    <input type="checkbox" id="siteOff" role="switch">
+  </label>
+
+  <details class="upd">
+    <summary>Обновления</summary>
+    <div class="upd-body">
+      <button id="check" type="button">Проверить сейчас</button>
+      <span id="status" class="hint"></span>
+      <label class="field">
+        <span>Токен GitHub (для приватного репозитория, только чтение)</span>
+        <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+      </label>
+    </div>
+  </details>
+
+  <p class="hint">Alt+Shift+D — быстрое включение и выключение</p>
+  <script src="popup.js"></script>
+</body>
+</html>
